@@ -129,6 +129,17 @@ class BasePage:
             self.takeScreenshot(locatorType)
             return False
 
+#code for implementing key codes on the pages(keyboard)
+
+    def Press_keyCode(self, value):
+        self.driver.press_keycode(value)
+
+    def LongPress_KeyCode(self, value):
+        self.driver.long_press_keycode(value)
+
+
+
+
     def screenShot(self, screenshotName):
         fileName = screenshotName + "_" + (time.strftime("%d_%m_%y_%H_%M_%S")) + ".png"
         screenshotDirectory = "../screenshots/"
@@ -143,8 +154,8 @@ class BasePage:
     def takeScreenshot(self, text):
         allure.attach(self.driver.get_screenshot_as_png(), name=text, attachment_type=AttachmentType.PNG)
 
-    def keyCode(self, value):
-        self.driver.press_keycode(value)
+
+
 
         # if locatorType == "id":
         #     element = wait.until(lambda x: x.find_element(AppiumBy.ID, locatorvalue))

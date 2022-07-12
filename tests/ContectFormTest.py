@@ -19,17 +19,17 @@ class ContactFormTest(unittest.TestCase):
     def test_opencontactForm(self):
         cl.allureLogs("App Launched")
         self.cf.clickContactFormButton()
-        # self.cf.key()
         self.cf.verifyContactPage()
 
     @pytest.mark.run(order=2)
     def test_enterDataInForm(self):
-        me()
+
         self.cf.enterEmail()
         self.cf.enterAddress()
         self.cf.enterMNumber()
+        self.cf.Press_Key_Code()
         self.cf.clickSubmitButton()
-        self.cf.keyCode(4)
+
 
 
 

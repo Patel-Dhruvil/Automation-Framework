@@ -47,3 +47,14 @@ class ContactForm(BasePage):
     def clickSubmitButton(self):
         self.clickElement(self._submitButton,"text")
         cl.allureLogs("Click Submit Button")
+
+    def Press_Key_Code(self):
+        value = int(input("Enter the key value"))
+        self.Press_keyCode(value)
+
+    def Long_Press_Keycode(self):
+        value = int(input("Enter the key value"))
+        self.LongPress_KeyCode(value)
+
+
+
