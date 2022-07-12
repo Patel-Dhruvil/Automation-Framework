@@ -1,0 +1,4 @@
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Edt_admin
+[32mINFO    [0m BasePage:BasePage.py:85 Unable to send text on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Edt_admin
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: text and with the locatorValue :SUBMIT
+[32mINFO    [0m BasePage:BasePage.py:71 Unable to click on Element with LocatorType: text and with the locatorValue :SUBMIT

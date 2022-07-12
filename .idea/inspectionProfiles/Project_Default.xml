@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pageObjects.ConfirmPage" />
+          <option value="task2.raw_input" />
+          <option value="appium.webdriver.common.appiumby import AppiumBy" />
+          <option value="AppiumFramwork.base.BasePage.AppiumFrameWork" />
+          <option value="AppiumFramwork.utilities.AllureLogger" />
+          <option value="Base.BasePage.Amazon_Pom" />
+          <option value="Pages.LoginFormPage.Amazon_Pom" />
+          <option value="Amazon_Pom" />
+          <option value="" />
+          <option value="from Amazon_Pom.Base.BasePage import BasePage" />
+          <option value="tests.LoginFormTest.LoginFormTest.driver" />
+          <option value="tests.conftest.AppiumFramwork" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

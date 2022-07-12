@@ -1,0 +1,2 @@
+[32mINFO    [0m BasePage:BasePage.py:54 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+[32mINFO    [0m BasePage:BasePage.py:71 Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login

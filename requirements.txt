@@ -1,0 +1,9 @@
+selenium==4.1.5
+pytest-parallel==0.1.1
+pytest-rerunfailures==10.2
+pytest==6.1.2
+fixturAppium-Python-Client==2.2.0
+allure-python-commons==2.9.45
+allure-pytest==2.9.45
+
+

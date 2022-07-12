@@ -1,0 +1,10 @@
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: text and with the locatorValue :Enter Name
+[32mINFO    [0m BasePage:BasePage.py:85 Unable to send text on Element with LocatorType: text and with the locatorValue :Enter Name
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: text and with the locatorValue :Enter Email
+[32mINFO    [0m BasePage:BasePage.py:85 Unable to send text on Element with LocatorType: text and with the locatorValue :Enter Email
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: text and with the locatorValue :Enter Address
+[32mINFO    [0m BasePage:BasePage.py:85 Unable to send text on Element with LocatorType: text and with the locatorValue :Enter Address
+[32mINFO    [0m BasePage:BasePage.py:54 Element found with LocatorType: index with the locatorValue :4
+[32mINFO    [0m BasePage:BasePage.py:85 Unable to send text on Element with LocatorType: index and with the locatorValue :4
+[32mINFO    [0m BasePage:BasePage.py:56 Element not found with LocatorType: text and with the locatorValue :SUBMIT
+[32mINFO    [0m BasePage:BasePage.py:71 Unable to click on Element with LocatorType: text and with the locatorValue :SUBMIT
