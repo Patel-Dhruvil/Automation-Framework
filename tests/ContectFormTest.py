@@ -15,6 +15,7 @@ class ContactFormTest(unittest.TestCase):
         self.bp = BasePage(self.driver)
 
 
+
     @pytest.mark.run(order=1)
     def test_opencontactForm(self):
         cl.allureLogs("App Launched")
@@ -25,10 +26,13 @@ class ContactFormTest(unittest.TestCase):
     def test_enterDataInForm(self):
 
         self.cf.enterEmail()
+        self.bp.Keyboard_Shown()
+        self.bp.HideKeyBoard()
         self.cf.enterAddress()
         self.cf.enterMNumber()
         self.cf.Press_Key_Code()
         self.cf.clickSubmitButton()
+
 
 
 

@@ -8,7 +8,7 @@ class Driver:
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
         desired_caps['deviceName'] = 'emulator-5554'
-        desired_caps['app'] = 'C:\\Python-Tranning\\Appium\\Android_Demo_App.apk'
+        desired_caps['app'] = 'C:\\Users\\150314\\Downloads\\Udemy_appium.apk'
         desired_caps['appPackage'] = 'com.code2lead.kwad'
         desired_caps['appActivity'] = 'com.code2lead.kwad.MainActivity'
 

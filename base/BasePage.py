@@ -137,6 +137,14 @@ class BasePage:
     def LongPress_KeyCode(self, value):
         self.driver.long_press_keycode(value)
 
+    def HideKeyBoard(self):
+        self.driver.hide_keyboard()
+
+    def Keyboard_Shown(self):
+        self.driver.is_keyboard_shown()
+
+
+
 
 
 
