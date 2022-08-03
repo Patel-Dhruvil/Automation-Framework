@@ -1,0 +1,8 @@
+[32mINFO    [0m BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+[32mINFO    [0m BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+[32mINFO    [0m BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+[32mINFO    [0m BasePage:BasePage.py:160 Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+[32mINFO    [0m BasePage:BasePage.py:82 Element found with LocatorType: text with the locatorValue :Enter Password
+[32mINFO    [0m BasePage:BasePage.py:160 Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+[32mINFO    [0m BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+[32mINFO    [0m BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 15-Jul-2022 at 17:11:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>C:\Program Files (x86)\Java\</td></tr>
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "7.1.2"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.19044-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"allure-pytest": "2.9.45", "html": "3.1.1", "metadata": "2.0.1", "parallel": "0.1.1", "rerunfailures": "10.2"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.9.9</td></tr></table>
+    <h2>Summary</h2>
+    <p>3 tests ran in 42.87 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">apptest/TestCases/LoginTest.py::LoginTest::test_enterDataInEditBox</td>
+          <td class="col-duration">29.10</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;apptest.PageObject.LoginPage.LoginPageTest object at 0x0000017F375F53D0&gt;, locatorValue = &#x27;com.code2lead.kwad:id/Btn_admin_sub&#x27;, locatorType = &#x27;id&#x27;<br/><br/>    def getElement(self, locatorValue, locatorType):<br/>        element = None<br/>        try:<br/>            locatorType = locatorType.lower()<br/>&gt;           element = self.waitForElement(locatorValue, locatorType)<br/><br/>..\..\harness\Base\BasePage.py:81: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;apptest.PageObject.LoginPage.LoginPageTest object at 0x0000017F375F53D0&gt;, locatorvalue = &#x27;com.code2lead.kwad:id/Btn_admin_sub&#x27;, locatorType = &#x27;id&#x27;<br/><br/>    def waitForElement(self, locatorvalue, locatorType):<br/>        locatorType = locatorType.lower()<br/>        element = None<br/>    <br/>        wait = WebDriverWait(self.driver, 10, poll_frequency=1,<br/>                             ignored_exceptions=[ElementNotVisibleException, ElementNotSelectableException,<br/>                                                 NoSuchElementException])<br/>    <br/>        list1 = [&quot;id&quot;, &quot;xpath&quot;, &quot;CLASS_NAME&quot;]<br/>        if locatorType in list1:<br/>&gt;           element = wait.until(lambda x: x.find_element(appium_element_locator_dict[locatorType], locatorvalue))<br/><br/>..\..\harness\Base\BasePage.py:32: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;4ce9460d-fcbf-4c1c-97c3-876ea3017c38&quot;)&gt;<br/>method = &lt;function BasePage.waitForElement.&lt;locals&gt;.&lt;lambda&gt; at 0x0000017F2823E5E0&gt;, message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       NoSuchElementError: An element could not be located on the page using the given search parameters.</span><br/><span class="error">E           at AndroidUiautomator2Driver.findElOrEls (C:\Program Files\Appium Server GUI\resources\app\node_modules\appium\node_modules\appium-android-driver\lib\commands\find.js:75:11)</span><br/><span class="error">E           at runMicrotasks (&lt;anonymous&gt;)</span><br/><span class="error">E           at processTicksAndRejections (internal/process/task_queues.js:97:5)</span><br/><span class="error">E           at AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\Program Files\Appium Server GUI\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\commands\find.js:33:12)</span><br/><span class="error">E           at AndroidUiautomator2Driver.findElement (C:\Program Files\Appium Server GUI\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\basedriver\commands\find.js:53:10)</span><br/><br/>C:\Users\150179\AppData\Roaming\Python\Python39\site-packages\selenium\webdriver\support\wait.py:90: TimeoutException<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;apptest.PageObject.LoginPage.LoginPageTest object at 0x0000017F375F53D0&gt;, locatorValue = &#x27;com.code2lead.kwad:id/Btn_admin_sub&#x27;, locatorType = &#x27;id&#x27;<br/><br/>    def clickElement(self, locatorValue, locatorType):<br/>        element = None<br/>        try:<br/>            locatorType = locatorType.lower()<br/>&gt;           element = self.getElement(locatorValue, locatorType)<br/><br/>..\..\harness\Base\BasePage.py:94: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;apptest.PageObject.LoginPage.LoginPageTest object at 0x0000017F375F53D0&gt;, locatorValue = &#x27;com.code2lead.kwad:id/Btn_admin_sub&#x27;, locatorType = &#x27;id&#x27;<br/><br/>    def getElement(self, locatorValue, locatorType):<br/>        element = None<br/>        try:<br/>            locatorType = locatorType.lower()<br/>            element = self.waitForElement(locatorValue, locatorType)<br/>            self.log.info(&quot;Element found with LocatorType: &quot; + locatorType + &quot; with the locatorValue :&quot; + locatorValue)<br/>        except:<br/>            self.log.info(<br/>                &quot;Element not found with LocatorType: &quot; + locatorType + &quot; and with the locatorValue :&quot; + locatorValue)<br/>            self.takeScreenshot(locatorType)<br/>&gt;           assert False<br/><span class="error">E           AssertionError</span><br/><br/>..\..\harness\Base\BasePage.py:87: AssertionError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;apptest.TestCases.LoginTest.LoginTest testMethod=test_enterDataInEditBox&gt;<br/><br/>    @pytest.mark.run(order=5)<br/>    def test_enterDataInEditBox(self):<br/>        self.gt.enterText()<br/>&gt;       self.gt.clickOnSubmit()<br/><br/>LoginTest.py:19: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>..\PageObject\LoginPage.py:59: in clickOnSubmit<br/>    self.clickElement(self._submitButton,&quot;id&quot;)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;apptest.PageObject.LoginPage.LoginPageTest object at 0x0000017F375F53D0&gt;, locatorValue = &#x27;com.code2lead.kwad:id/Btn_admin_sub&#x27;, locatorType = &#x27;id&#x27;<br/><br/>    def clickElement(self, locatorValue, locatorType):<br/>        element = None<br/>        try:<br/>            locatorType = locatorType.lower()<br/>            element = self.getElement(locatorValue, locatorType)<br/>            element.click()<br/>            self.log.info(<br/>                &quot;Clicked on Element with LocatorType: &quot; + locatorType + &quot; and with the locatorValue :&quot; + locatorValue)<br/>        except:<br/>            self.log.info(<br/>                &quot;Unable to click on Element with LocatorType: &quot; + locatorType + &quot; and with the locatorValue :&quot; + locatorValue)<br/>            self.takeScreenshot(locatorType)<br/>&gt;           assert False<br/><span class="error">E           AssertionError</span><br/><br/>..\..\harness\Base\BasePage.py:102: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Before Class
+Before Method
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     BasePage:BasePage.py:84 Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:163 Unable to send text on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:84 Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn_admin_sub
+INFO     BasePage:BasePage.py:99 Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn_admin_sub<br/> ----------------------------Captured stdout teardown---------------------------- <br/>After Method
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">apptest/TestCases/LoginTest.py::LoginTest::test_loginFailMethod</td>
+          <td class="col-duration">3.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Before Method
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+INFO     BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:160 Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: text with the locatorValue :Enter Password
+INFO     BasePage:BasePage.py:160 Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+INFO     BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3<br/> ----------------------------Captured stdout teardown---------------------------- <br/>After Method
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">apptest/TestCases/LoginTest.py::LoginTest::test_openLoginScreen</td>
+          <td class="col-duration">9.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Before Method
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+INFO     BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:160 Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: text with the locatorValue :Enter Password
+INFO     BasePage:BasePage.py:160 Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+INFO     BasePage:BasePage.py:82 Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+INFO     BasePage:BasePage.py:96 Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3<br/> ----------------------------Captured stdout teardown---------------------------- <br/>After Method
+After Class
+<br/></div></td></tr></tbody></table></body></html>

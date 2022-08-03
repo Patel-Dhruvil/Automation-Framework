@@ -1,0 +1,173 @@
+15/07/22 05:25:45 PM Friday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+15/07/22 05:25:45 PM Friday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+15/07/22 05:25:46 PM Friday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+15/07/22 05:25:46 PM Friday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+15/07/22 05:25:46 PM Friday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+15/07/22 05:25:47 PM Friday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+15/07/22 05:25:47 PM Friday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+15/07/22 05:25:47 PM Friday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:11:04 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:11:04 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:11:05 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:11:06 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:11:07 PM Sunday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+17/07/22 04:11:08 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+17/07/22 04:11:08 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:11:08 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:11:42 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:11:42 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:11:45 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShotsid_17_07_22_16_11_43.png
+17/07/22 04:12:54 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:12:55 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:12:57 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_17_07_22_16_12_56.png
+17/07/22 04:15:45 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:15:47 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:19:45 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:19:47 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_19_46.png
+17/07/22 04:19:47 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:22:00 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:22:02 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_22_01.png
+17/07/22 04:22:02 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:22:04 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_22_03.png
+17/07/22 04:24:35 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:24:36 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_24_35.png
+17/07/22 04:24:37 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:24:38 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_24_37.png
+17/07/22 04:25:58 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:25:59 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_25_58.png
+17/07/22 04:26:01 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:26:02 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_17_07_22_16_26_01.png
+17/07/22 04:27:25 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:27:26 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_27_25.png
+17/07/22 04:27:27 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:27:29 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_27_27.png
+17/07/22 04:27:30 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_17_07_22_16_27_29.png
+17/07/22 04:28:28 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:28:28 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:28:29 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:29 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:30 PM Sunday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+17/07/22 04:28:30 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+17/07/22 04:28:31 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:28:31 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:28:33 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:28:33 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:28:34 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:35 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:35 PM Sunday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+17/07/22 04:28:36 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+17/07/22 04:28:36 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:28:36 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:28:37 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:38 PM Sunday - BasePage - INFO : Unable to send text on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:28:38 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Et4__17_07_22_16_28_38.png
+17/07/22 04:28:39 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn_admin_sub
+17/07/22 04:28:39 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn_admin_sub
+17/07/22 04:29:17 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:29:17 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:29:19 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:29:19 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+17/07/22 04:29:20 PM Sunday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+17/07/22 04:29:20 PM Sunday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+17/07/22 04:29:21 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:29:21 PM Sunday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+17/07/22 04:29:52 PM Sunday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:29:53 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__17_07_22_16_29_52.png
+17/07/22 04:29:54 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:29:55 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login_17_07_22_16_29_54.png
+17/07/22 04:30:56 PM Sunday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:30:57 PM Sunday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+17/07/22 04:30:58 PM Sunday - BasePage - INFO : Screenshot save to Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login_17_07_22_16_30_57.png
+19/07/22 01:38:19 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 01:38:19 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 01:38:21 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 01:38:22 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 01:38:23 PM Tuesday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+19/07/22 01:38:23 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+19/07/22 01:38:24 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 01:38:24 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 02:27:09 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 02:27:09 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 02:27:11 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 02:27:12 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 02:27:12 PM Tuesday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+19/07/22 02:27:13 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+19/07/22 02:27:13 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 02:27:13 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 03:31:42 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 03:31:42 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 03:31:44 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 03:31:45 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+19/07/22 03:31:45 PM Tuesday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+19/07/22 03:31:46 PM Tuesday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+19/07/22 03:31:46 PM Tuesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 03:31:46 PM Tuesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3
+19/07/22 04:08:24 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:08:24 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_08_24.png
+19/07/22 04:08:24 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:08:24 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_08_24.png
+19/07/22 04:08:35 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:08:35 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_08_35.png
+19/07/22 04:08:35 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:08:35 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_08_35.png
+19/07/22 04:10:32 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:10:32 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_10_32.png
+19/07/22 04:10:32 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:10:32 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_10_32.png
+19/07/22 04:10:58 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:10:58 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_10_58.png
+19/07/22 04:10:58 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:10:58 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_10_58.png
+19/07/22 04:12:32 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:32 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_12_32.png
+19/07/22 04:12:32 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:32 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_12_32.png
+19/07/22 04:12:34 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:34 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_12_34.png
+19/07/22 04:12:34 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:34 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_12_34.png
+19/07/22 04:12:36 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:36 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id = com.code2lead.kwad:id/Login__19_07_22_16_12_36.png
+19/07/22 04:12:36 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:12:36 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_12_36.png
+19/07/22 04:16:56 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:16:56 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 04:16:56 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_16_16_56.png
+19/07/22 05:18:43 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:18:43 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:18:43 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_18_43.png
+19/07/22 05:19:40 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:19:40 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:19:40 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_19_40.png
+19/07/22 05:21:01 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:21:01 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:21:01 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_21_01.png
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_23_26.png
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:26 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_23_26.png
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_23_59.png
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:23:59 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_23_59.png
+19/07/22 05:29:23 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:29:23 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:29:23 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_29_23.png
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_30_25.png
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Element not found with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Unable to click on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+19/07/22 05:30:25 PM Tuesday - BasePage - INFO : Unable to save Screenshot to the Path : C:\Python-Tranning\Appium_Automation_Framework\targetfolder\ScreenShots\id_19_07_22_17_30_25.png
+20/07/22 03:21:02 PM Wednesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Login
+20/07/22 03:21:02 PM Wednesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Login
+20/07/22 03:21:04 PM Wednesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Et4
+20/07/22 03:21:04 PM Wednesday - BasePage - INFO : Send text  on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Et4
+20/07/22 03:21:05 PM Wednesday - BasePage - INFO : Element found with LocatorType: text with the locatorValue :Enter Password
+20/07/22 03:21:05 PM Wednesday - BasePage - INFO : Send text  on Element with LocatorType: text and with the locatorValue :Enter Password
+20/07/22 03:21:06 PM Wednesday - BasePage - INFO : Element found with LocatorType: id with the locatorValue :com.code2lead.kwad:id/Btn3
+20/07/22 03:21:06 PM Wednesday - BasePage - INFO : Clicked on Element with LocatorType: id and with the locatorValue :com.code2lead.kwad:id/Btn3

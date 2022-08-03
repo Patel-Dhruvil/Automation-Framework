@@ -5,5 +5,3 @@ pytest==6.1.2
 fixturAppium-Python-Client==2.2.0
 allure-python-commons==2.9.45
 allure-pytest==2.9.45
-
-

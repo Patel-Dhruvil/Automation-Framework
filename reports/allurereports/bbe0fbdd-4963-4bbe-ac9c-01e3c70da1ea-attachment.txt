@@ -1,4 +1,0 @@
-Before Class
-Before Method
-After Method
-After Class
